@@ -1,0 +1,318 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>shopping website</title>
+<!--stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!--light-slider-css--->
+<link rel="stylesheet" type="text/css" href="angular/js/lightslider.css"/>
+<!---jquery---->
+<script src="angular/js/jquery.js"></script>
+<!---light-slider-js-->
+<script src="angular/js/lightslider.js"></script>
+
+
+<!--fav-icon----->
+<link rel="shortcut icon" href="D:/angular js/images/logo1.png"/>
+<!---using Font-awesome-for icons--->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+</head>
+<body ng-app="">
+<!------navigation-->
+<center><nav>
+    <!-----social link and phone number-->
+    <div class="social call">
+    <!--social links------>
+    <div class="social"></div>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <!---phone number-->
+    <div class="phone"></div>
+    <span>Call +1234567891</span>
+    </div></center>
+    <!--menu bar----->
+    <div class="navigation">
+        <!--logo-->
+        <a href="" class="logo">
+            <img src="images/logo2.png" height="300px" width="100px"/>
+        </a>
+        
+        <!-------menu-icon------>
+        <div class="toggle"></div>
+        <!--menu-->
+        <ul class="menu">
+            <li><a href="project2.html">Home</a></li>
+            <li><a href="makeup.html">Makeup</a></li>
+            <li><a href="skincare.html">skincare</a>
+            <!--sale-lable-->
+            <span class="sale-lable">Sale</span>
+            </li>
+            <li><a href="aboutus.html">About Us</a></li> 
+        </ul>
+        <!---right menu-->
+        <div class="right-menu">
+            <!--search-->
+            <a href="javascript:void(0);" class="search">
+             <i class="fas fa-search"></i>   
+            </a>
+             <!--user-->
+             <a href="javascript:void(0);" class="user">
+                <i class="far fa-user"></i>   
+               </a>
+                <!--cart-icon-->
+                <a href="">
+                    <i class="fas fa-shopping-cart">
+                    <!--number-of-products-in-cart-->
+                    <span class="num-cart-product">0</span>   
+                </i></a>
+        </div>
+    </div>
+    </nav>
+    <!--search-bar----->
+    <div class="search-bar">
+        <!--search-input------>
+        <div class="search-input">
+            <!--input----->
+            <input type="text" placeholder="Search For Products"/>
+            <!--cancel-btn---->
+            <a href="javascript:void(0);" class="search-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <!---login-and-sign-up-form------->
+    <div class="form">
+        <!--login---------->
+        <div class="login-form">
+            <!--cancel-btn---------------->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+            <strong>Log In</strong>
+            <!--inputs-->
+            <form name="loginform" novalidate>
+                <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <label>Enter Captcha:</label>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <input type="text" class="form-control" readonly id="capt">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input type="text" class="form-control" id="textinput"placeholder="Click image for captcha" required />
+                    </div>
+                  </div>
+            
+                <div class="form-group">
+                            
+                           <a href="form1.html"> <input type="button" value="Login" onclick="validcap()" class="btn btn-lg btn-success btn-block"/></a>
+                        </div>
+                    </form><br/>
+               <center>  <img src="C:/angular js/images/refresh.jpg" width="40px" onclick="cap()"></center>
+                <script type="text/javascript">
+                    function cap(){
+                      var alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V'
+                                   ,'W','X','Y','Z','1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f','g','h','i',
+                                   'j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', '!','@','#','$','%','^','&','*','+'];
+                                   var a = alpha[Math.floor(Math.random()*71)];
+                                   var b = alpha[Math.floor(Math.random()*71)];
+                                   var c = alpha[Math.floor(Math.random()*71)];
+                                   var d = alpha[Math.floor(Math.random()*71)];
+                                   var e = alpha[Math.floor(Math.random()*71)];
+                                   var f = alpha[Math.floor(Math.random()*71)];
+                  
+                                   var final = a+b+c+d+e+f;
+                                   document.getElementById("capt").value=final;
+                                 }
+                                 function validcap(){
+                                  var stg1 = document.getElementById('capt').value;
+                                  var stg2 = document.getElementById('textinput').value;
+                                  if(stg1==stg2){
+                                    window.location.href="form1.html";
+                                    
+                                  }else{
+                                    alert("Please enter a valid captcha");
+                                   
+                                  }
+                                 }
+                  </script>
+               
+                
+      
+            </form>
+            <!--forget-and-sign-up-btn-->
+            <div class="form-btns">
+                
+            </div>
+        </div>
+            <!--Sign-up---------->
+            <div class="sign-up-form">
+                <!--cancel-btn---------------->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+                <strong>Sign Up</strong>
+                <!--inputs-->
+                <form name="sign-up-form">
+                    <input type="text" name="fullname" placeholder="Full Name" required/>
+                    <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                    <input type="password" name="password" placeholder="Password" required/>
+                    
+                    <input type="submit" value="Sign Up"/>
+                </form>
+                <!--forget-and-sign-up-btn-->
+                <div class="form-btns">
+                    <a href="javascript:void(0);" class="already-account">
+                        Already Have Account?</a>
+    
+                </div>
+            </div>
+    </div>
+    </div>
+    <!-----top brands-->
+   <section class="arrival-heading">
+    <!---heading-->
+    <div class="arrival-heading">
+        <strong>Top Brands</strong>
+    </div>
+    <!--product-container------------->
+    <div class="product-container">
+        <!---product-box-1-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="cart.html" class="add-cart">
+                <i class="fas fa-shopping-cart"></i>
+         </a>
+         <a href="swiss.html"><img src="images/swissbeauty.png"/></a>
+             </div>
+             <!---details-->
+             <div class="product-details">
+              <a href="swiss.html" class="p-name">SWISS BEAUTY</a>
+
+             </div>
+        </div>
+
+        <!---product-box-2-->
+        <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="cart.html" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="maybelline.html"><img src="images/maybelline.jpeg"/></a>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="maybelline.html" class="p-name">MAYBELLINE NEW YORK</a>
+          </div>
+     </div><!---product-box-3-->
+     <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="cart.html" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="lakme.html"><img src="images/lakme.jpg"/></a>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="lakme.html" class="p-name">LAKME</a>
+          </div>
+     </div>
+     <!---product-box-4-->
+     <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="cart.html" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="charlotte.html"><img src="images/charlottetilbury.png"/></a>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="charlotte.html" class="p-name">CHARLOTTE TILBURY</a>
+          </div>
+    </div>
+    </div>
+     <!-----categories to bag-->
+   <section class="arrival-heading">
+    <!---heading-->
+    <div class="arrival-heading">
+        <strong>Categories To Bag</strong>
+    </div>
+    <!--product-container------------->
+    <div class="product-container">
+        <!---product-box-1-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="cart.html" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+         <a href="highlighter.html"><img src="images/highlighter.JPG"/></a>
+             </div>
+             <!---details-->
+             <div class="product-details">
+               <center><a href="highlighter.html" class="p-name">HIGHLIGHTERS</a></center> 
+             </div>
+        </div>
+
+        <!---product-box-2-->
+        <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="cart.html" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="foundation.html"><img src="images/foundation.webp"/></a>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="foundation.html" class="p-name">FOUNDATIONS</a>
+          </div>
+     </div><!---product-box-3-->
+     <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="cart.html" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="eyeliner.html"><img src="images/eyeliner1.webp"/></a>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="eyeliner.html" class="p-name">EYELINERS</a>
+          </div>
+     </div><!---product-box-4-->
+     <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="cart.html" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="lipstick.html"><img src="images/lipstick.jpg"/></a>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="lipstick.html" class="p-name">LIPSTICKS</a>
+          </div>
+     
+    
+
+</body>
+</html>

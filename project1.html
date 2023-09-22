@@ -1,0 +1,702 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Clearance Services</title>
+<!--stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!--light-slider-css--->
+<link rel="stylesheet" type="text/css" href="D:/angular/js/lightslider.css"/>
+<!---jquery---->
+<script src="js/jquery.js"></script>
+<!---light-slider-js-->
+<script src="D:/angular/js/lightslider.js"></script>
+<!--Captcha-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<!--fav-icon----->
+<link rel="shortcut icon" href="images/logo4.png"/>
+<!---using Font-awesome-for icons--->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <style>
+    img {
+      width: 100%;
+    }
+
+    .height {
+      height: 10px;
+    }
+      
+    /* Image-container design */
+    .image-container {
+      max-width: 800px;
+      position: relative;
+      margin: auto;
+    }
+      
+    .next {
+      right: 0;
+    }
+      
+    /* Next and previous icon design */
+    .previous,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 10px;
+      margin-top: -25px;
+    }
+      
+    /* caption decorate */
+    .captionText {
+      color: #000000;
+      font-size: 14px;
+      position: absolute;
+      padding: 12px 12px;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+      
+    /* Slider image number */
+    .slideNumber {
+      background-color: #5574C5;
+      color: white;
+      border-radius: 25px;
+      right: 0;
+      opacity: .5;
+      margin: 5px;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+      position: absolute;
+    }
+    .fa {
+      font-size: 32px;
+    }
+      
+    .fa:hover {
+      transform: rotate(360deg);
+      transition: 1s;
+      color: white;
+    }
+      
+    .footerdot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbbbbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.5s ease;
+    }
+      
+    .active,
+    .footerdot:hover {
+      background-color: black;
+    }
+      
+  </style>
+      
+<!------navigation-->
+<nav>
+    <!-----social link and phone number-->
+    <div class="social call">
+    <!--social links------>
+    <div class="social"></div>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <!---phone number-->
+    <div class="phone"></div>
+    <span>Call +1234567891</span>
+    </div>
+    <!--menu bar----->
+    <div class="navigation">
+        <!--logo-->
+        <a href="" class="logo">
+            <img src="images/logo4.png" height="300px" width="100px"/>
+        </a>
+         <!-------menu-icon------>
+        <div class="toggle"></div>
+        <!--menu-->
+        <ul class="menu">
+            <li><a href="project1.html">Home</a></li>
+            <li><a href="form6.html">Register</a></li>
+            <li><a href="about.html">About Us</a></li>
+            
+        </ul>
+        <!---right menu-->
+        <div class="right-menu">
+           
+             <!--user-->
+             <a href="javascript:void(0);" class="user">
+                <i class="far fa-user"></i>   
+               </a>
+                
+        </div>
+    </div>
+    </nav>
+    <!--search-bar----->
+    <div class="search-bar">
+        <!--search-input------>
+        <div class="search-input">
+            <!--input----->
+            <input type="text" placeholder="Search For Products"/>
+            <!--cancel-btn---->
+            <a href="javascript:void(0);" class="search-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <!---login-and-sign-up--------------------------------->
+    <div class="form">
+        <!--login---------->
+        <div class="login-form">
+            <!--cancel-btn---------------->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+            <strong>Log In</strong>
+            <!--inputs-->
+            <form name="loginform" novalidate>
+                <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <label>Enter Captcha:</label>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <input type="text" class="form-control" readonly id="capt">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input type="text" class="form-control" id="textinput"placeholder="Click image for captcha" required />
+                    </div>
+                  </div>
+            
+                <div class="form-group">
+                            
+                           <a href="form1.html"> <input type="button" value="Login" onclick="validcap()" class="btn btn-lg btn-success btn-block"/></a>
+                        </div>
+                    </form><br/>
+               <center>  <img src="C:/angular js/images/refresh.jpg" width="40px" onclick="cap()"></center>
+                <script type="text/javascript">
+                    function cap(){
+                      var alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V'
+                                   ,'W','X','Y','Z','1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f','g','h','i',
+                                   'j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', '!','@','#','$','%','^','&','*','+'];
+                                   var a = alpha[Math.floor(Math.random()*71)];
+                                   var b = alpha[Math.floor(Math.random()*71)];
+                                   var c = alpha[Math.floor(Math.random()*71)];
+                                   var d = alpha[Math.floor(Math.random()*71)];
+                                   var e = alpha[Math.floor(Math.random()*71)];
+                                   var f = alpha[Math.floor(Math.random()*71)];
+                  
+                                   var final = a+b+c+d+e+f;
+                                   document.getElementById("capt").value=final;
+                                 }
+                                 function validcap(){
+                                  var stg1 = document.getElementById('capt').value;
+                                  var stg2 = document.getElementById('textinput').value;
+                                  if(stg1==stg2){
+                                    window.location.href="form1.html";
+                                    
+                                  }else{
+                                    alert("Please enter a valid captcha");
+                                   
+                                  }
+                                 }
+                  </script>
+               
+                
+      
+            </form>
+            <!--forget-and-sign-up-btn-->
+            <div class="form-btns">
+                
+            </div>
+        </div>
+            <!--Sign-up---------->
+            <div class="sign-up-form">
+                <!--cancel-btn---------------->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+                <strong>Sign Up</strong>
+                <!--inputs-->
+                <form name="sign-up-form">
+                    <input type="text" name="fullname" placeholder="Full Name" required/>
+                    <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                    <input type="password" name="password" placeholder="Password" required/>
+                    
+                    <input type="submit" value="Sign Up"/>
+                </form>
+                <!--forget-and-sign-up-btn-->
+                <div class="form-btns">
+                    <a href="javascript:void(0);" class="already-account">
+                        Already Have Account?</a>
+    
+                </div>
+            </div>
+    </div>
+   <!---Dark-Mode-->
+       
+   <script src=
+   "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+       </script>
+        
+       <style>
+           body{
+           text-align:center;
+           }
+          
+           .mode {
+               float:left;
+           }
+           .change {
+               cursor: pointer;
+               border: 1px solid #555;
+               border-radius: 40%;
+               width: 20px;
+               text-align: center;
+               padding: 5px;
+               margin-left: 8px;
+           }
+           .dark{
+               background-color: #222;
+               color: white;
+               
+               
+            }
+            
+           
+       </style>
+   
+    <br/><br/>
+   
+       <div class="mode">
+                     
+           <b><span class="change" >DARK MODE</span></b>
+       </div>
+        
+       
+    
+       </div>
+        
+       <script>
+           $( ".change" ).on("click", function() {
+               if( $( "body" ).hasClass( "dark" )) {
+                   $( "body" ).removeClass( "dark" );
+                   $( ".change" ).text( "DARK MODE" );
+               } else {
+                   $( "body" ).addClass( "dark" );
+                   $( ".change" ).text( "DARK MODE" );
+               }
+           });
+       </script></br>
+       
+    
+    <!---full-slider-->
+
+    <style>
+      img {
+        width: 100%;
+      }
+      .height {
+        height: 10px;
+      }
+        
+      /* Image-container design */
+      .image-container {
+        max-width: 800px;
+        position: relative;
+        margin: auto;
+      }
+        
+      .next {
+        right: 0;
+      }
+        
+      /* Next and previous icon design */
+      .previous,
+      .next {
+        cursor: pointer;
+        position:unset;
+        top: 50%;
+        padding: 10px;
+        margin-top: -25px;
+      }
+        
+      /* caption decorate */
+      .captionText {
+        color: #000000;
+        font-size: 14px;
+        position: absolute;
+        padding: 12px 12px;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+        
+      /* Slider image number */
+      .slideNumber {
+        background-color: #5574C5;
+        color: white;
+        border-radius: 25px;
+        right: 0;
+        opacity: .5;
+        margin: 5px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        position: absolute;
+      }
+      .fa {
+        font-size: 32px;
+      }
+        
+      .fa:hover {
+        transform: rotate(360deg);
+        transition: 1s;
+        color: rgb(28, 157, 218);
+      }
+        
+      .footerdot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.5s ease;
+      }
+        
+      .active,
+      .footerdot:hover {
+        background-color: black;
+      }
+        
+    </style>
+    
+    <!-------Demo video-->
+    
+      <!-- Image container of the image slider -->
+      <div class="image-container">
+        
+        <div class="slide">
+         
+          <img src="C:/angular js/images/a1.jpg" width="500px" height="500px">
+        </div>
+        <div class="slide">
+         
+          <img src="C:/angular js/images/a2.jpg" width="500px" height="500px">
+        </div>
+    
+        <!-- Next and Previous icon to change images -->
+        <a class="previous" onclick="moveSlides(-1)">
+          <i class="fa fa-chevron-circle-left"></i>
+        </a>
+        <a class="next" onclick="moveSlides(1)">
+          <i class="fa fa-chevron-circle-right"></i>
+        </a>
+      </div>
+      <br>
+    
+      <div style="text-align:center">
+        <span class="footerdot"
+          onclick="activeSlide(1)">
+        </span>
+        <span class="footerdot"
+          onclick="activeSlide(2)">
+        </span>
+        
+      </div>
+    </body>
+    <script>
+      var slideIndex = 1;
+      displaySlide(slideIndex);
+    
+      function moveSlides(n) {
+        displaySlide(slideIndex += n);
+      }
+    
+      function activeSlide(n) {
+        displaySlide(slideIndex = n);
+      }
+    
+      /* Main function */
+      function displaySlide(n) {
+        var i;
+        var totalslides =
+          document.getElementsByClassName("slide");
+        var totaldots =
+          document.getElementsByClassName("footerdot");
+        
+        if (n > totalslides.length) {
+          slideIndex = 1;
+        }
+        
+        if (n < 1) {
+          slideIndex = totalslides.length;
+        }
+        for (i = 0; i < totalslides.length; i++) {
+          totalslides[i].style.display = "none";
+        }
+        for (i = 0; i < totaldots.length; i++) {
+          totaldots[i].className =
+          totaldots[i].className.replace(" active", "");
+        }
+        totalslides[slideIndex - 1].style.display = "block";
+        totaldots[slideIndex - 1].className += " active";
+      }
+    </script>
+    
+    <div>
+          
+      <video width="500px" height="500px" 
+      controls="controls"/> 
+        
+      <source src="C:/angular js/images/Clearance Services1.mp4" 
+          type="video/mp4"> 
+  </video> 
+    </div>
+  
+       
+       
+        
+        <div class="timeline">
+          <div class="container left">
+            <div class="content">
+              <h2>STEP 1</h2>
+             <p>REGISTRATION</p></a> 
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h2>STEP 2</h2>
+             <p>LOG IN</p> 
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h2>STEP 3</h2>
+              <p>FILL APPLICATION</p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h2>STEP 4</h2>
+              <p>PAY FEES</p> 
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h2>STEP 5</h2>
+              <p>VERIFICATION BY HIGHER AUTHORITY</p> 
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h2>STEP 6</h2>
+              <p>VERIFICATION BY CFC</p> 
+            </div>
+          </div>
+        </div>
+    
+    <!--------services----------->
+        <section class="services">
+          
+           <!----services-box-2---->
+           <div class="services-box">
+            <i class="fas fa-headphones-alt"></i>
+            <span>Support 24/7</span>
+            <p>We Support 24hrs A Day </p>
+        </div>
+        
+       <br><br>
+
+        </section>
+
+        <!-------------footer-->
+        
+            
+            <!---copyright-->
+            <span class="copyright">
+               <b></b> 
+            </span>
+            <!------subscribe-->
+            <div class="subscribe">
+               
+                    <form>
+                    <input type="email" placeholder="Example@gmail.com" required/>
+                    <input type="submit" value="subscribe"/>
+                </form>
+            
+            
+            </div>
+        
+
+       
+    <!--jquery------>
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <!--script----->
+    <script type="text/javascript">
+   /-------for-search-bar---/ 
+   $(document).on('click','.search',function(){
+       $('.search-bar').addClass('search-bar-active')
+   });
+   
+   $(document).on('click','.search-cancel',function(){
+       $('.search-bar').removeClass('search-bar-active')
+   });
+   
+   /---login-sign-up-form---/
+   $(document).on('click','.user,.already-account',function(){
+       $('.form').addClass('login-active').removeClass('sign-up-active')
+   });
+
+   $(document).on('click','.sign-up-btn',function(){
+       $('.form').addClass('sign-up-active').removeClass('login-active')
+   });
+
+   $(document).on('click','.form-cancel',function(){
+       $('.form').removeClass('login-active').removeClass('sign-up-active')
+   });
+   $(document).on('click','.sign-up-btn',function(){
+       $('.form').addClass('sign-up-active').removeClass('login-active')
+   });
+  
+
+   /----full-slider-script--------/
+   $(document).ready(function() {
+    $('#adaptive').lightSlider({
+        adaptiveHeight:true,
+        item:1,
+        slideMargin:0,
+        loop:true
+    });
+});
+  /---feature-slider----------/
+  $(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cs-hidden');
+        } 
+    });  
+  });
+
+  /--------------------for-fix-menu-when-scroll-------------------/
+  $(window).scroll(function(){
+      if($(document).scrollTop() > 50){
+          $('.navigation').addClass('fix-nav');
+      }
+      else{
+         $('.navigation').removeClass('fix-nav'); 
+      }
+  });
+  /------for-responsive-menu-----------/
+  $(document).ready(function(){
+      $('.toggle').click(function(){
+          $('.toggle').toggleClass('active')
+          $('.navigation').toggleClass('active')
+      })
+  })
+   </script>
+   <script>
+       var myindex=0;
+       carousel();
+
+       function carousel(){
+           var i;
+           var x=document.getElementsByClassName("full-slider-box");
+           for(i=0;i<x.length;i++){
+               x[i].style.display="none";
+           }
+           myindex++;
+           if(myindex>x.length){myindex=1}
+           x[myindex-1].style.display="block";
+           setTimeout(carousel,3000);
+       }
+   </script>
+   <script>
+    $(function() {
+$("form[name='loginform']").validate({
+ // Specify validation rules
+ rules: {
+   Name: "required",
+   email: {
+     required: true,
+     email: true
+   },
+   password: {
+     required: true,
+     minlength: 5
+   }
+ },
+ // Specify validation error messages
+ messages: {
+   Name: "Please enter your Name",
+   password: {
+     required: "Please provide a password",
+     minlength: "Your password must be at least 5 characters long"
+   },
+   email: "Please enter a valid email address"
+ },
+
+ submitHandler: function(form) {
+   form.submit();
+ }
+});
+});
+</script>
+<script>
+    $(function() {
+$("form[name='sign-up-form']").validate({
+ // Specify validation rules
+ rules: {
+   Name: "required",
+   email: {
+     required: true,
+     email: true
+   },
+   password: {
+     required: true,
+     minlength: 5
+   }
+ },
+ // Specify validation error messages
+ messages: {
+   name: "Please enter your Name",
+   password: {
+     required: "Please provide a password",
+     minlength: "Your password must be at least 5 characters long"
+   },
+   email: "Please enter a valid email address"
+ },
+
+ submitHandler: function(form) {
+   form.submit();
+ }
+});
+});
+</script>
+</body>
+</html>

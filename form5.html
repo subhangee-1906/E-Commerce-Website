@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+        <script>
+            var obj=angular.module("app",[]);
+            obj.controller("ctrl",function($scope){
+            });
+            </script>
+            <style>
+                html, body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    }
+
+    form {
+    padding: 25px;
+    margin: 25px;
+    box-shadow: 0 10px 8px #2a1cf0;
+    background: #aff381;
+    }
+    .fas {
+    margin: 25px 10px 0;
+    font-size: 72px;
+    color: #fff;
+    }
+    .fa-envelope {
+    transform: rotate(-20deg);
+    }
+    .fa-at , .fa-mail-bulk{
+    transform: rotate(10deg);
+    }
+    input, textarea {
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #1c87c9;
+    outline: none;
+    }
+    input::placeholder {
+    color: #666;
+    }
+
+
+    @media (min-width: 568px) {
+    .main-block {
+    flex-direction: row;
+    }
+    .left-part, form {
+    width: 50%;
+    }
+    .fa-envelope {
+    margin-top: 0;
+    margin-left: 20%;
+    }
+    .fa-at {
+    margin-top: -10%;
+    margin-left: 65%;
+    }
+    .fa-mail-bulk {
+    margin-top: 2%;
+    margin-left: 28%;
+    }
+    button{
+        margin-top: 50px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+            </style>
+    </head>
+    <body ng-app="app" ng-controller="ctrl">
+        <form name="formQ" novalidate action="/myaction" method="post"><div>
+            <!-----image and doc as input------>
+            <h2>Documents Required</h2>
+            Photo<input type="file" name=photo onchange="readURL(this)" accept="Image/*"/></br>
+            <span ng-show="formQ.photo.$touched && formQ.photo.$error.required">Please Upload Photo as Image</span></br>
+            Sign<input type="file" name=sign onchange="readURL(this)" accept="Image/*"/></br>
+            <span ng-show="formQ.sign.$touched && formQ.sign.$error.required">Please Upload Sign as Image</span></br>
+        </div>
+
+        <div>
+        SSC Certificate/Birth Certificate/School Leaving Certificate<br>
+        <input type="file" name=pd1 onchange="readURL(this)" accept="application/pdf,application/vnd.ms-word/*"/></br> 
+        <span ng-show="formQ.pd1.$touched && formQ.pd1.$error.required">Please Upload as PDF</span></br>
+        PAN Card<br>
+        <input type="file" name=pd2 onchange="readURL(this)" accept="application/pdf,application/vnd.ms-word/*"/></br> 
+        <span ng-show="formQ.pd2.$touched && formQ.pd2.$error.required">Please Upload as PDF</span></br>
+        Passport/Current Light Bill<br>
+        <input type="file" name=pd3 onchange="readURL(this)" accept="application/pdf,application/vnd.ms-word/*"/></br> 
+        <span ng-show="formQ.pd3.$touched && formQ.pd3.$error.required">Please Upload as PDF</span></br>
+        Letter From Company/Application To commissioner<br>
+        <input type="file" name=pd4 onchange="readURL(this)" accept="application/pdf,application/vnd.ms-word/*"/></br> 
+        <span ng-show="formQ.pd4.$touched && formQ.pd4.$error.required">Please Upload as PDF</span></br>
+        </div>
+        <input type="submit" value='submit' ng-disabled="formQ.$invalid" />   
+        <a href="payment.html">
+            <input type="button" value="Next" />
+        </a>
+        </form>
+          
+    </body>
+</html>

@@ -1,0 +1,755 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>shopping website</title>
+<!--stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!--light-slider-css--->
+<link rel="stylesheet" type="text/css" href="D:/angular/js/lightslider.css"/>
+<!---jquery---->
+<script src="js/jquery.js"></script>
+<!---light-slider-js-->
+<script src="D:/angular/js/lightslider.js"></script>
+
+
+<!--fav-icon----->
+<link rel="shortcut icon" href="/logo2.png"/>
+<!---using Font-awesome-for icons--->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+    
+<!------navigation-->
+<center><nav>
+    <!-----social link and phone number-->
+    <div class="social call">
+    <!--social links------>
+    <div class="social"></div>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <!---phone number-->
+    <div class="phone"></div>
+    <span>Call +1234567891</span>
+    </div></center>
+    <!--menu bar----->
+    <div class="navigation">
+        <!--logo-->
+        <a href="" class="logo">
+            <img src="images/logo2.png" height="300px" width="100px"/>
+        </a>
+        
+        <!-------menu-icon------>
+        <div class="toggle"></div>
+        <!--menu-->
+        <ul class="menu">
+            <li><a href="project.html">Home</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="women.html">Women</a>
+            <!--sale-lable-->
+            <span class="sale-lable">Sale</span>
+            </li>
+            <li><a href="kids.html">Kids</a></li>
+            <li><a href="appliances.html">Appliances</a></li>
+        </ul>
+        <!---right menu-->
+        <div class="right-menu">
+            <!--search-->
+            <a href="javascript:void(0);" class="search">
+             <i class="fas fa-search"></i>   
+            </a>
+             <!--user-->
+             <a href="javascript:void(0);" class="user">
+                <i class="far fa-user"></i>   
+               </a>
+                <!--cart-icon-->
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart">
+                    <!--number-of-products-in-cart-->
+                    <span class="num-cart-product">0</span>   
+                </i></a>
+        </div>
+    </div>
+    </nav>
+    <!--search-bar----->
+    <div class="search-bar">
+        <!--search-input------>
+        <div class="search-input">
+            <!--input----->
+            <input type="text" placeholder="Search For Products"/>
+            <!--cancel-btn---->
+            <a href="javascript:void(0);" class="search-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <!---login-and-sign-up--------------------------------->
+    <div class="form">
+        <!--login---------->
+        <div class="login-form">
+            <!--cancel-btn---------------->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+            <strong>Log In</strong>
+            <!--inputs-->
+            <form name="loginform" novalidate>
+                <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <input type="submit"  ng-disabled="loginform.$invalid" value="Log In"/>
+            </form>
+            <!--forget-and-sign-up-btn-->
+            <div class="form-btns">
+                <a href="#" class="forget">Forget Your Password?</a>
+                <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
+            </div>
+        </div>
+            <!--Sign-up---------->
+            <div class="sign-up-form">
+                <!--cancel-btn---------------->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+                <strong>Sign Up</strong>
+                <!--inputs-->
+                <form name="sign-up-form">
+                    <input type="text" name="fullname" placeholder="Full Name" required/>
+                    <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                    <input type="password" name="password" placeholder="Password" required/>
+                    <input type="submit" value="Sign Up"/>
+                </form>
+                <!--forget-and-sign-up-btn-->
+                <div class="form-btns">
+                    <a href="javascript:void(0);" class="already-account">
+                        Already Have Account?</a>
+    
+                </div>
+            </div>
+    </div>
+    <style>
+        :root {
+--portfolio: url('images/bg1.png');
+}
+.dark-mode:root {
+--portfolio: url('images/bg3.jpg');
+}
+.portfolio-animation{
+  background: var(--portfolio);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 267.5px;
+  height: 182px;
+  margin: 0 auto;
+}
+    </style>
+  <script>
+       const html = document.querySelector('html');
+const checkbox = document.querySelector('.switch');
+
+
+let check;
+
+(() => {
+
+  check = localStorage.getItem('check');
+
+  if(check) {
+    html.classList.toggle('dark-mode');
+  }
+
+})();
+
+checkbox.addEventListener('change', function(){
+
+  check = html.classList.toggle('dark-mode');
+
+  if(check == true) {
+    localStorage.setItem('check', check);
+  } else {
+    localStorage.clear();
+  }
+
+});
+
+  </script>
+   
+    <!---full-slider-->
+
+    <center><ul id="adaptive" class="cs-hidden">
+        <!---box-1-->
+        <li class="item-a">
+            <!---box-->
+            <div class="full-slider-box f-slide-1">
+                <!---slider-text-container---->
+                <div class="slider-text-container">
+                    
+                    <div class="f-slider-text">
+                   <span><b>Limited Offers</b></span> 
+                   <strong>45% Off<br/> With<font> Promo Code</font></strong>
+                  <center><a href="#" class="f-slider-btn">Shop Now</a></center> 
+                </div>
+            </div>
+            </div>
+        </li>
+         <!---box-2-->
+         <li class="item-a">
+            <!---box-->
+            <div class="full-slider-box f-slide-2">
+                <!---slider-text-container---->
+                <div class="slider-text-container">
+                    
+                    <div class="f-slider-text">
+                   <span><b>Limited Offers</b></span> 
+                   <strong>35% Off<br/> With<font> Promo Code</font></strong>
+                  <center><a href="#" class="f-slider-btn">Shop Now</a></center> 
+                </div>
+            </div>
+            </div>
+        </li>
+         <!---box-3-->
+         <li class="item-a">
+            <!---box-->
+            <div class="full-slider-box f-slide-3">
+                <!---slider-text-container---->
+                <div class="slider-text-container">
+                    
+                    <div class="f-slider-text">
+                   <span><b>Limited Offers</b></span> 
+                   <strong>40% Off<br/> With<font> Promo Code</font></strong>
+                  <center><a href="#" class="f-slider-btn">Shop Now</a></center> 
+                </div>
+            </div>
+            </div>
+        </li><br/><br/>
+       
+
+       
+    </center>
+    <!----featured categories------->
+      <div class="feature-heading">
+          <h2>Featured categories</h2>
+      </div><br/><br/>
+          <ul id="autoWidth" class="cs-hidden">
+              <!---1-->
+              <li class="item">
+       <!-----feature-box-->
+        <div class="feature-box">
+            <a href="MFormals.html">
+               <center><img src="images/MF1.webp" /></center> 
+            </a>
+        </div>
+        <!----text---->
+        <span>Shirt</span>
+    </li>
+
+    <!---2-->
+    <li class="item">
+        <!-----feature-box-->
+         <div class="feature-box">
+             <a href="Kurta's.html">
+                <center><img src="images/K8.webp" /></center> 
+             </a>
+         </div>
+         <!----text---->
+         <span>Kurtas</span>
+     </li>
+
+     <!---3-->
+     <li class="item">
+        <!-----feature-box-->
+         <div class="feature-box">
+             <a href="TOPS.html">
+                <center><img src="images/T3.webp" /></center> 
+             </a>
+         </div>
+         <!----text---->
+         <span>Tops</span>
+     </li>
+
+     <!---4-->
+     <li class="item">
+        <!-----feature-box-->
+         <div class="feature-box">
+             <a href="DUPATTA.html">
+                <center><img src="images/D3.webp" /></center> 
+             </a>
+         </div>
+         <!----text---->
+         <span>Dupatta</span>
+     </li>
+
+     <!---5-->
+     <li class="item">
+        <!-----feature-box-->
+         <div class="feature-box">
+             <a href="i1.html">
+                <center><img src="images/ic1.jpg" /></center> 
+             </a>
+         </div>
+         <!----text---->
+         <span>Infant Dress</span>
+     </li>
+    </ul>
+
+   <!-----new-arrival-->
+   <section class="arrival-heading">
+       <!---heading-->
+       <div class="arrival-heading">
+           <strong>New Arrival</strong>
+           <p>We Provide You New Design Fashionable Products</p>
+       </div>
+       <!--product-container------------->
+       <div class="product-container">
+           <!---product-box-1-->
+           <div class="product-box">
+               <!---img---->
+               <div class="product-img">
+                   <!---add-cart------>
+               <a href="#" class="add-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+               <img src="images/D2.webp"/>
+                </div>
+                <!---details-->
+                <div class="product-details">
+                    <a href="d2.html" class="p-name">Off-White Solid Cotton Dupatta</a>
+                    <span class="p-price">Rs 319</span>
+                </div>
+           </div>
+
+           <!---product-box-2-->
+           <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="#" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+            <img src="images/mf5.3.jpg"/>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="MF5.html" class="p-name">Taavi</a>
+                 <span class="p-price">Rs 1600</span>
+             </div>
+        </div><!---product-box-3-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="#" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+            <img src="images/tr7.1.jpg"/>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="TR7.html" class="p-name">Puma</a>
+                 <span class="p-price">Rs 1537</span>
+             </div>
+        </div><!---product-box-4-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="#" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+            <img src="images/aw5.webp"/>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="a7.html" class="p-name">SWADESI STUFF</a>
+                 <span class="p-price">Rs 402</span>
+             </div>
+        </div><!---product-box-5-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="#" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+            <img src="images/BF2.jpg"/>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="bf2.html" class="p-name">Auriz Jr Walking Shoes</a>
+                 <span class="p-price">Rs 2799</span>
+             </div>
+        </div><!---product-box-6-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="#" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+            <img src="images/GF5.webp"/>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="gf5.html" class="p-name">STAR RUNNER 2 Running Shoes</a>
+                 <span class="p-price">Rs 2796</span>
+             </div>
+        </div>
+         <!---product-box-7-->
+         <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="#" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+            <img src="images/J2.webp"/>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="j2.html" class="p-name">Burgundy Solid Basic</a>
+                 <span class="p-price">Rs 1174</span>
+             </div>
+        </div> <!---product-box-8-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="#" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+            <img src="images/FT4.webp"/>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="#" class="p-name">INVICTUS</a>
+                 <span class="p-price"> Under Rs 1079</span>
+             </div>
+        </div>
+       </div>
+   </section>
+
+     <!---sale---->
+     <section class="sale">
+           <!-------sale-box-1-------->
+           <div class="sale-box">
+               <!----img------>
+               <img src="images/jump9.webp"/>
+               <!----text---------->
+               <a href="j5.html">
+                   <div class="sale-text">
+                     <strong>Blue & Green Floral Print Playsuit</strong>
+                     <span>Sale 25% Off</span>  
+                   </div>
+               </a>
+           </div>
+               <!-------sale-box-2-------->
+           <div class="sale-box">
+            <!----img------>
+            <img src="images/liba10.webp"/>
+            <!----text---------->
+            <a href="l5.html">
+                <div class="sale-text">
+                  <strong>Cotton Kurta Set </strong>
+                  <span>Sale 25% Off</span>  
+                </div>
+            </a>
+        </div>
+         <!-------sale-box--------->
+         <div class="sale-box">
+            <!----img------>
+            <img src="images/MA6.webp"/>
+            <!----text---------->
+            <a href="ma6.html">
+                <div class="sale-text">
+                  <strong>Black Solid Denim Jacket </strong>
+                  <span>Sale 25% Off</span>  
+                </div>
+            </a>
+        </div>         
+     </section>
+
+
+
+       <!-----new-arrival-->
+   <section class="arrival-heading">
+    <!---heading-->
+    <div class="arrival-heading">
+        <strong>Feature Item</strong>
+        <p>We Provide You New Design Fashionable Products</p>
+    </div>
+    <!--product-container------------->
+    <div class="product-container">
+        <!---product-box-1-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="#" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+            <img src="images/MA1.webp"/>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="ma1.html" class="p-name">Printed T-Shirts For Men</a>
+             </div>
+        </div>
+
+        <!---product-box-2-->
+        <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="#" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+         <img src="images/L4.webp"/>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="l4.html" class="p-name">Printed Kurta with Palazzos & Dupatta</a>
+          </div>
+     </div><!---product-box-3-->
+     <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="#" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+         <img src="images/M1.webp"/>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="m1.html" class="p-name">Grey Super Skinny Fit Jeggings</a>
+          </div>
+     </div><!---product-box-4-->
+     <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="#" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+         <img src="images/VM4.webp"/>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="vm4.html" class="p-name">Women Red Solid A-Line Dress</a>
+          </div>
+          </div>
+        </section>
+        
+         <!---------banner------------>
+
+          <!---box-->
+          <div class="banner-box f-slide-2">
+            <!---slider-text-container---->
+            <div class="banner-text-container">
+                
+                <div class="banner-text">
+               <span><b>Limited Offers</b></span> 
+               <strong>45% Off<br/> With<font> Promo Code</font></strong>
+               <a href="#" class="banner-btn">Shop Now</a>
+            </div>
+        </div>
+        </div>
+
+        <!--------services----------->
+        <section class="services">
+          <!----services-box-1---->
+          <div class="services-box">
+              <i class="fas fa-shipping-fast"></i>
+              <span>Free Shipping</span>
+              <p>Free Shipping On Prepaid Orders </p>
+          </div>
+
+           <!----services-box-2---->
+           <div class="services-box">
+            <i class="fas fa-headphones-alt"></i>
+            <span>Support 24/7</span>
+            <p>We Support 24hrs A Day </p>
+        </div>
+        
+        <!----services-box-3---->
+        <div class="services-box">
+            <i class="fas fa-sync"></i>
+            <span>100% Money Back</span>
+            <p>You Have 30Days To Return </p>
+        </div>
+
+        </section>
+
+        <!-------------footer-->
+        
+            <footer>
+            <!---copyright-->
+            <span class="copyright">
+               <b>Copyright 2021 - ShopIn</b> 
+            </span>
+            <!------subscribe-->
+            <div class="subscribe">
+               <center>
+                    <form>
+                    <input type="email" placeholder="Example@gmail.com" required/>
+                    <input type="submit" value="subscribe"/>
+                </form>
+            </center>
+            
+            </div>
+        </footer>
+    
+    <!--jquery------>
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <!--script----->
+    <script type="text/javascript">
+   /-------for-search-bar---/ 
+   $(document).on('click','.search',function(){
+       $('.search-bar').addClass('search-bar-active')
+   });
+   
+   $(document).on('click','.search-cancel',function(){
+       $('.search-bar').removeClass('search-bar-active')
+   });
+   
+   /---login-sign-up-form---/
+   $(document).on('click','.user,.already-account',function(){
+       $('.form').addClass('login-active').removeClass('sign-up-active')
+   });
+
+   $(document).on('click','.sign-up-btn',function(){
+       $('.form').addClass('sign-up-active').removeClass('login-active')
+   });
+
+   $(document).on('click','.form-cancel',function(){
+       $('.form').removeClass('login-active')
+   });
+   $(document).on('click','.sign-up-btn',function(){
+       $('.form').addClass('sign-up-active').removeClass('login-active')
+   });
+  
+
+   /----full-slider-script--------/
+   $(document).ready(function() {
+    $('#adaptive').lightSlider({
+        adaptiveHeight:true,
+        item:1,
+        slideMargin:0,
+        loop:true
+    });
+});
+  /---feature-slider----------/
+  $(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cs-hidden');
+        } 
+    });  
+  });
+
+  /--------------------for-fix-menu-when-scroll-------------------/
+  $(window).scroll(function(){
+      if($(document).scrollTop() > 50){
+          $('.navigation').addClass('fix-nav');
+      }
+      else{
+         $('.navigation').removeClass('fix-nav'); 
+      }
+  });
+  /------for-responsive-menu-----------/
+  $(document).ready(function(){
+      $('.toggle').click(function(){
+          $('.toggle').toggleClass('active')
+          $('.navigation').toggleClass('active')
+      })
+  })
+   </script>
+   <script>
+       var myindex=0;
+       carousel();
+
+       function carousel(){
+           var i;
+           var x=document.getElementsByClassName("full-slider-box");
+           for(i=0;i<x.length;i++){
+               x[i].style.display="none";
+           }
+           myindex++;
+           if(myindex>x.length){myindex=1}
+           x[myindex-1].style.display="block";
+           setTimeout(carousel,3000);
+       }
+   </script>
+   <script>
+    $(function() {
+$("form[name='loginform']").validate({
+ // Specify validation rules
+ rules: {
+   Name: "required",
+   email: {
+     required: true,
+     email: true
+   },
+   password: {
+     required: true,
+     minlength: 5
+   }
+ },
+ // Specify validation error messages
+ messages: {
+   Name: "Please enter your Name",
+   password: {
+     required: "Please provide a password",
+     minlength: "Your password must be at least 5 characters long"
+   },
+   email: "Please enter a valid email address"
+ },
+
+ submitHandler: function(form) {
+   form.submit();
+ }
+});
+});
+</script>
+<script>
+    $(function() {
+$("form[name='sign-up-form']").validate({
+ // Specify validation rules
+ rules: {
+   Name: "required",
+   email: {
+     required: true,
+     email: true
+   },
+   password: {
+     required: true,
+     minlength: 5
+   }
+ },
+ // Specify validation error messages
+ messages: {
+   name: "Please enter your Name",
+   password: {
+     required: "Please provide a password",
+     minlength: "Your password must be at least 5 characters long"
+   },
+   email: "Please enter a valid email address"
+ },
+
+ submitHandler: function(form) {
+   form.submit();
+ }
+});
+});
+</script>
+</body>
+</html>

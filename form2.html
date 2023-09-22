@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+        <script>
+            var obj=angular.module("app",[]);
+            obj.controller("ctrl",function($scope){
+            });
+            </script>
+            <style>
+                html, body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    }
+
+    form {
+    padding: 25px;
+    margin: 25px;
+    box-shadow: 0 10px 8px #2a1cf0;
+    background: #aff381;
+    }
+    .fas {
+    margin: 25px 10px 0;
+    font-size: 72px;
+    color: #fff;
+    }
+    .fa-envelope {
+    transform: rotate(-20deg);
+    }
+    .fa-at , .fa-mail-bulk{
+    transform: rotate(10deg);
+    }
+    input, textarea {
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #1c87c9;
+    outline: none;
+    }
+    input::placeholder {
+    color: #666;
+    }
+
+
+    @media (min-width: 568px) {
+    .main-block {
+    flex-direction: row;
+    }
+    .left-part, form {
+    width: 50%;
+    }
+    .fa-envelope {
+    margin-top: 0;
+    margin-left: 20%;
+    }
+    .fa-at {
+    margin-top: -10%;
+    margin-left: 65%;
+    }
+    .fa-mail-bulk {
+    margin-top: 2%;
+    margin-left: 28%;
+    }
+    button{
+        margin-top: 50px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+            </style>
+    </head>
+    <body ng-app="app" ng-controller="ctrl">
+        <form name="formO" novalidate action="/myaction" method="post"><div>
+            <!------Current Occupation Details-------->
+            Present Occupation/Service</br>
+            Occupation/Service<br/>
+            <input type="text" name=occup ng-model="occ" ng-required="true"/>
+            <span ng-show="formO.occup.$touched && formO.occup.$error.required">Please Enter Current Occupation</span></br>
+            Post<br/>
+            <input type="text" name=ypost ng-model="ypos" ng-required="true"/>
+            <span ng-show="formO.ypost.$touched && formO.ypost.$error.required">Please Enter Post/Designation</span></br>
+            Address<br/>
+            <input type="text" name=ofadd ng-model="oadd" ng-required="true"/>
+            <span ng-show="formO.ofadd.$touched && formO.ofadd.$error.required">Please Enter Address</span></br>
+            Telephone<br/>
+            <input type="text" name=tno ng-model="tno" ng-required="true" ng-pattern="/^[0][1-9]\d{9}$|^[1-9]\d{9}$/" />  
+            <span ng-show="formO.tno.$touched && formO.tno.$error.required">Please Enter contact</span>
+            <span ng-show="formO.tno.$touched && formO.Tno.$error.pattern">Please Enter Correct Number</span></br></br>
+        </div>   
+        <div>
+            <!--------Education Qualification---------->
+            <table>
+                Education Qualification<br/>
+                Marks in 10th<br/>
+                <input type="text" name=ten ng-model="ten" ng-required="true"/>
+                <span ng-show="formO.occup.$touched && formO.occup.$error.required">Please Enter the marks</span></br>
+                Marks in 12th<br/>
+                <input type="text" name=twe ng-model="twe" ng-required="true"/>
+                <span ng-show="formO.occup.$touched && formO.occup.$error.required">Please Enter the marks</span></br>
+                Degree in Under-Graduate<br/>
+                <input type="text" name=dug ng-model="dug" />
+                </br>
+                Degree in Post-Graduate<br/>
+                <input type="text" name=dpg ng-model="dpg" />
+                </br>
+                School Name/College Name<br/><input type="text" name=sncn ng-model="sncn" ng-required="true"/>
+                <span ng-show="formO.occup.$touched && formO.occup.$error.required">School Name/College Name</span></br>
+                Marks in Under-Graduate<br/><input type="text" name=mug ng-model="mug" />
+                </br>
+                Marks in Post-Graduate<br/><input type="text" name=mpg ng-model="mpg" />
+                </br>
+                Year of Passing(School)<br/><input type="text" name=yps ng-model="yps" ng-required="true"/>
+                <span ng-show="formO.occup.$touched && formO.occup.$error.required">Year of Passing(School)</span></br>
+                Year of Passing(College)<br/><input type="text" name=ypc ng-model="ypc" />
+                </br>
+            </table>
+        </div> 
+        <input type="submit" value="Submit" ng-disabled="formO.$invalid" />
+        <a href="form3.html">
+            <input type="button" value="Next" />
+        </a>
+        </form>
+    </body>
+</html>

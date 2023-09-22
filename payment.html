@@ -1,0 +1,297 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Clearance Services</title>
+<!--stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!--light-slider-css--->
+<link rel="stylesheet" type="text/css" href="D:/angular/js/lightslider.css"/>
+<!---jquery---->
+<script src="js/jquery.js"></script>
+<!---light-slider-js-->
+<script src="D:/angular/js/lightslider.js"></script>
+<!--Captcha-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<!--fav-icon----->
+<link rel="shortcut icon" href="images/logo4.png"/>
+<!---using Font-awesome-for icons--->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+    
+<!------navigation-->
+<nav>
+    <!-----social link and phone number-->
+    <div class="social call">
+    <!--social links------>
+    <div class="social"></div>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <!---phone number-->
+    <div class="phone"></div>
+    <span>Call +1234567891</span>
+    </div>
+    <!--menu bar----->
+    <div class="navigation">
+        <!--logo-->
+        <a href="" class="logo">
+            <img src="images/logo4.png" height="300px" width="100px"/>
+        </a>
+         <!-------menu-icon------>
+        <div class="toggle"></div>
+        <!--menu-->
+       <center>
+        <ul class="menu">
+            <li><a href="project1.html">Home</a></li>
+            <li><a href="form6.html">Register</a></li>
+            <li><a href="about.html">About Us</a></li>
+            
+        </ul>
+       </center>
+
+    </div>
+    </nav>
+    <!---Dark-Mode-->
+       
+   <script src=
+   "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+       </script>
+        
+       <style>
+           body{
+           
+           text-align:center;
+           }
+          
+           .mode {
+               float:left;
+           }
+           .change {
+               cursor: pointer;
+               border: 1px solid #555;
+               border-radius: 40%;
+               width: 20px;
+               text-align: center;
+               padding: 5px;
+               margin-left: 8px;
+           }
+           .dark{
+               background-color: #222;
+               color: #e6e6e6;
+           }
+           button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+       </style>
+   
+    <br/><br/>
+   
+    <div class="mode">
+                     
+        <b><span class="change" >DARK MODE</span></b>
+    </div> 
+    </div>
+    <script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "DARK MODE" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "DARK MODE" );
+            }
+        });
+    </script></br>
+       </div>
+         <!----featured categories------->
+         <h1>CLEARANCE SERVICES</h1>
+      <div class="arrival-heading"><br>
+        
+        
+    </div>
+    <ul id="autoWidth" class="cs-hidden">
+        <img src="images/logo4.png" height="500px" width="500px" style="float:right"  /> <br/>
+    <div>
+        <p>
+            
+                <h1>You Can Pay Here</h1>
+                <form action="https://rzp.io/l/7LfQ8BdE1y">
+                    <button class = "pay" type="submit">
+                        Proceed to payment page
+                    </button>
+                </form>
+                
+           
+            
+    </p>
+    <b>Our Email-Id:</b> ClearanceServices1923@gmail.com<br/>
+            <b>Contact Number:</b> 9999999999
+</div> 
+        
+      
+     
+     
+
+<!--jquery------>
+<script src="js/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<!--script----->
+<script type="text/javascript">
+/-------for-search-bar---/ 
+$(document).on('click','.search',function(){
+ $('.search-bar').addClass('search-bar-active')
+});
+
+$(document).on('click','.search-cancel',function(){
+ $('.search-bar').removeClass('search-bar-active')
+});
+
+/---login-sign-up-form---/
+$(document).on('click','.user,.already-account',function(){
+ $('.form').addClass('login-active').removeClass('sign-up-active')
+});
+
+$(document).on('click','.sign-up-btn',function(){
+ $('.form').addClass('sign-up-active').removeClass('login-active')
+});
+
+$(document).on('click','.form-cancel',function(){
+ $('.form').removeClass('login-active').removeClass('sign-up-active')
+});
+$(document).on('click','.sign-up-btn',function(){
+ $('.form').addClass('sign-up-active').removeClass('login-active')
+});
+
+
+/----full-slider-script--------/
+$(document).ready(function() {
+$('#adaptive').lightSlider({
+  adaptiveHeight:true,
+  item:1,
+  slideMargin:0,
+  loop:true
+});
+});
+/---feature-slider----------/
+$(document).ready(function() {
+$('#autoWidth').lightSlider({
+  autoWidth:true,
+  loop:true,
+  onSliderLoad: function() {
+      $('#autoWidth').removeClass('cs-hidden');
+  } 
+});  
+});
+
+/--------------------for-fix-menu-when-scroll-------------------/
+$(window).scroll(function(){
+if($(document).scrollTop() > 50){
+    $('.navigation').addClass('fix-nav');
+}
+else{
+   $('.navigation').removeClass('fix-nav'); 
+}
+});
+/------for-responsive-menu-----------/
+$(document).ready(function(){
+$('.toggle').click(function(){
+    $('.toggle').toggleClass('active')
+    $('.navigation').toggleClass('active')
+})
+})
+</script>
+<script>
+ var myindex=0;
+ carousel();
+
+ function carousel(){
+     var i;
+     var x=document.getElementsByClassName("full-slider-box");
+     for(i=0;i<x.length;i++){
+         x[i].style.display="none";
+     }
+     myindex++;
+     if(myindex>x.length){myindex=1}
+     x[myindex-1].style.display="block";
+     setTimeout(carousel,3000);
+ }
+</script>
+<script>
+$(function() {
+$("form[name='loginform']").validate({
+// Specify validation rules
+rules: {
+Name: "required",
+email: {
+required: true,
+email: true
+},
+password: {
+required: true,
+minlength: 5
+}
+},
+// Specify validation error messages
+messages: {
+Name: "Please enter your Name",
+password: {
+required: "Please provide a password",
+minlength: "Your password must be at least 5 characters long"
+},
+email: "Please enter a valid email address"
+},
+
+submitHandler: function(form) {
+form.submit();
+}
+});
+});
+</script>
+<script>
+$(function() {
+$("form[name='sign-up-form']").validate({
+// Specify validation rules
+rules: {
+Name: "required",
+email: {
+required: true,
+email: true
+},
+password: {
+required: true,
+minlength: 5
+}
+},
+// Specify validation error messages
+messages: {
+name: "Please enter your Name",
+password: {
+required: "Please provide a password",
+minlength: "Your password must be at least 5 characters long"
+},
+email: "Please enter a valid email address"
+},
+
+submitHandler: function(form) {
+form.submit();
+}
+});
+});
+</script>
+</body>
+</html>

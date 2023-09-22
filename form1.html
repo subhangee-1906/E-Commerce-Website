@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+        <script>
+            var obj=angular.module("app",[]);
+            obj.controller("ctrl",function($scope){
+            });
+            </script>
+            <style>
+                html, body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    }
+
+    form {
+    padding: 25px;
+    margin: 25px;
+    box-shadow: 0 10px 8px #2a1cf0;
+    background: #aff381;
+    }
+    .fas {
+    margin: 25px 10px 0;
+    font-size: 72px;
+    color: #fff;
+    }
+    .fa-envelope {
+    transform: rotate(-20deg);
+    }
+    .fa-at , .fa-mail-bulk{
+    transform: rotate(10deg);
+    }
+    input, textarea {
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #1c87c9;
+    outline: none;
+    }
+    input::placeholder {
+    color: #666;
+    }
+
+
+    @media (min-width: 568px) {
+    .main-block {
+    flex-direction: row;
+    }
+    .left-part, form {
+    width: 50%;
+    }
+    .fa-envelope {
+    margin-top: 0;
+    margin-left: 20%;
+    }
+    .fa-at {
+    margin-top: -10%;
+    margin-left: 65%;
+    }
+    .fa-mail-bulk {
+    margin-top: 2%;
+    margin-left: 28%;
+    }
+    button{
+        margin-top: 50px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+            </style>
+    </head>
+    <body ng-app="app" ng-controller="ctrl">
+        <form action="/myaction" method="post" name="formM" novalidate>
+            <!------general info----->
+            <div>General Information</br>
+                Applicant's Name<input type="text" name=cn ng-model="cname" ng-required="true"/>
+                <span ng-show="formM.cn.$touched && formM.cn.$error.required">Please enter candidate name</span>
+                <span ng-show="formN.cn.$touched && formN.cn.$error.pattern">English characters only.</span></br>
+                DOB<input type="date" name=db ng-model="codb" ng-required="true"/>
+                <span ng-show="formM.db.$touched && formM.db.$error.required">Please enter Date of Birth</span></br>
+                ID Name.
+                <select ng-model="iname" name="iname" ng-required="true">
+                    <option>PAN Card</option>
+                    <option>Driving Licence</option>
+                    <option>Election Card</option>
+                </select>
+                <span ng-show="formM.iname.$touched && formM.iname.$error.required">Please Select ID Name</span></br>
+                ID Number<input type="number" name="ino" ng-model="idno" ng-required="true" ng-minlength="10" ng-maxlength="10"/>
+                <span ng-show="formM.ino.$touched && formM.ino.$error.required">Please enter Aadhar number</span>
+                <span ng-show="formM.ino.$touched && formM.ino.$error.minlength">length is 10</span>
+                <span ng-show="formM.ino.$touched && formM.ino.$error.maxlength">length is 10</span></br>
+                Email-id<input type="email" name="eid" ng-model="ceid" ng-required="true"/>
+                <span ng-show="formM.eid.$touched && formM.eid.$error.required">Please enter Email-id</span>
+                <span ng-show="formM.eid.$touched && formM.eid.$error.email">Please enter email in proper format</span></br>
+            </div>
+            <!-----Address Info----->
+            <div>
+                Present Residential Address</br>
+                Building<input type="text" name="bname" ng-model="bnam" ng-required="true"/>
+                <span ng-show="formM.bname.$touched && formM.bname.$error.required">Please Enter Building Name</span></br>
+                Street<input type="text" name="sname" ng-model="snam" ng-required="true"/>
+                <span ng-show="formM.sname.$touched && formM.sname.$error.required">Please enter address</span></br>
+                Landmark<input type="text" name="lmark" ng-model="lmar" ng-required="true"/>
+                <span ng-show="formM.lmark.$touched && formM.lmark.$error.required">Please enter address</span></br>
+                Locality<input type="text" name="local" ng-model="loca" ng-required="true"/>
+                <span ng-show="formM.local.$touched && formM.local.$error.required">Please enter address</span></br>
+                State
+                <select ng-model="stnam" name="stnam" ng-required="true">
+                    <option>Maharashtra</option>
+                </select>
+                <span ng-show="formM.stnam.$touched && formM.stnam.$error.required">Please Select State</span></br>
+                District<input type="text" name="dname" ng-model="dnam" ng-required="true"/>
+                <span ng-show="formM.dname.$touched && formM.dname.$error.required">Please Select District</span></br>
+                Tehsil<input type="text" name="tname" ng-model="tnam" ng-required="true"/>
+                <span ng-show="formM.tname.$touched && formM.tname.$error.required">Please Select Tehsil</span></br>
+                Village<input type="text" name="vname" ng-model="vnam" ng-required="true"/>
+                <span ng-show="formM.vname.$touched && formM.vname.$error.required">Please enter address</span></br>
+                Pincode<input type="text" name="pno" ng-model="pn" ng-required="true"/>
+                <span ng-show="formM.pno.$touched && formM.pno.$error.required">Please enter address</span>
+                <span ng-show="formM.pno.$touched && formM.pno.$error.pattern">Pin shoud be 6 digit</span></br>
+                Resident Since<input type="text" name="rsince" ng-model="rsinc" ng-required="true"/>
+                <span ng-show="formM.rsince.$touched && formM.rsince.$error.required">Please enter address</span></br>
+            </div>
+            <div>Previous Address</br>
+                Building<input type="text" name="bname1" ng-model="bnam1" ng-required="true"/>
+                <span ng-show="formM.bname1.$touched && formM.bname1.$error.required">Please enter address</span></br>
+                Street<input type="text" name="sname1" ng-model="snam1" ng-required="true"/>
+                <span ng-show="formM.sname1.$touched && formM.sname1.$error.required">Please enter address</span></br>
+                Landmark<input type="text" name="lmark1" ng-model="lmar1" ng-required="true"/>
+                <span ng-show="formM.lmark1.$touched && formM.lmark1.$error.required">Please enter address</span></br>
+                Locality<input type="text" name="local1" ng-model="loca1" ng-required="true"/>
+                <span ng-show="formM.local1.$touched && formM.local1.$error.required">Please enter address</span></br>
+                State<input type="text" name="stname1" ng-model="stnam1" ng-required="true"/>
+                <span ng-show="formM.stname1.$touched && formM.stname1.$error.required">Please enter address</span></br>
+                District<input type="text" name="dname1" ng-model="dnam1" ng-required="true"/>
+                <span ng-show="formM.dname1.$touched && formM.dname1.$error.required">Please enter address</span></br>
+                Tehsil<input type="text" name="tname1" ng-model="tnam1" ng-required="true"/>
+                <span ng-show="formM.tname1.$touched && formM.tname1.$error.required">Please enter address</span></br>
+                Village<input type="text" name="vname1" ng-model="vnam1" ng-required="true"/>
+                <span ng-show="formM.vname1.$touched && formM.vname1.$error.required">Please enter address</span></br>
+                Pincode<input type="text" name="pno1" ng-model="pn1" ng-required="true"/>
+                <span ng-show="formM.pno1.$touched && formM.pno1.$error.required">Please enter address</span>
+                <span ng-show="formM.pno1.$touched && formM.pno1.$error.pattern">Pin shoud be 6 digit</span></br>
+                Resident Since<input type="text" name="rsince1" ng-model="rsinc1" ng-required="true"/>
+                <span ng-show="formM.rsince1.$touched && formM.rsince1.$error.required">Please enter address</span></br>
+                Permanent Address</br>
+                Building<input type="text" name="bname2" ng-model="bnam2" ng-required="true"/>
+                <span ng-show="formM.bname2.$touched && formM.bname2.$error.required">Please enter address</span></br>
+                Street<input type="text" name="sname2" ng-model="snam2" ng-required="true"/>
+                <span ng-show="formM.sname2.$touched && formM.sname2.$error.required">Please enter address</span></br>
+                Landmark<input type="text" name="lmark2" ng-model="lmar2" ng-required="true"/>
+                <span ng-show="formM.lmark2.$touched && formM.lmark2.$error.required">Please enter address</span></br>
+                Locality<input type="text" name="local2" ng-model="loca2" ng-required="true"/>
+                <span ng-show="formM.local2.$touched && formM.local2.$error.required">Please enter address</span></br>
+                State<input type="text" name="stname2" ng-model="stnam2" ng-required="true"/>
+                <span ng-show="formM.stname2.$touched && formM.stname2.$error.required">Please enter address</span></br>
+                District<input type="text" name="dname2" ng-model="dnam2" ng-required="true"/>
+                <span ng-show="formM.dname2.$touched && formM.dname2.$error.required">Please enter address</span></br>
+                Tehsil<input type="text" name="tname2" ng-model="tnam2" ng-required="true"/>
+                <span ng-show="formM.tname2.$touched && formM.tname2.$error.required">Please enter address</span></br>
+                Village<input type="text" name="vname2" ng-model="vnam2" ng-required="true"/>
+                <span ng-show="formM.vname2.$touched && formM.vname2.$error.required">Please enter address</span></br>
+                Pincode<input type="text" name="pno2" ng-model="pn2" ng-required="true" ng-pattern="/^(\d{6}|\d{6})$/"/>
+                <span ng-show="formM.pno2.$touched && formM.pno2.$error.required">Please enter address</span>
+                <span ng-show="formM.pno2.$touched && formM.pno2.$error.pattern">Pin shoud be 6 digit</span></br>
+                Resident Since<input type="number" name="rsince2" ng-model="rsinc2" ng-required="true"/>
+                <span ng-show="formM.rsince2.$touched && formM.rsince2.$error.required">Please enter number of years</span></br>
+            </div>
+        Mobile number<input type="number" name="no" ng-model="mno" ng-required="true" ng-pattern="/^[0][1-9]\d{9}$|^[1-9]\d{9}$/"/>
+        <span ng-show="formM.no.$touched && formM.no.$error.required">Please enter Mobile number</span>
+        <span ng-show="formM.no.$touched && formM.no.$error.pattern">Please enter 10 mob no in correct format</span></br>
+        <input type="submit" value='login' ng-disabled="formM.$invalid" />
+        <a href="form2.html">
+            <input type="button" value="Next" />
+        </a>
+    </form>
+    </body>
+    
+</html>

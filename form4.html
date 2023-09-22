@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+        <script>
+            var obj=angular.module("app",[]);
+            obj.controller("ctrl",function($scope){
+            });
+            </script>
+            <style>
+                html, body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    }
+
+    form {
+    padding: 25px;
+    margin: 25px;
+    box-shadow: 0 10px 8px #2a1cf0;
+    background: #aff381;
+    }
+    .fas {
+    margin: 25px 10px 0;
+    font-size: 72px;
+    color: #fff;
+    }
+    .fa-envelope {
+    transform: rotate(-20deg);
+    }
+    .fa-at , .fa-mail-bulk{
+    transform: rotate(10deg);
+    }
+    input, textarea {
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #1c87c9;
+    outline: none;
+    }
+    input::placeholder {
+    color: #666;
+    }
+
+
+    @media (min-width: 568px) {
+    .main-block {
+    flex-direction: row;
+    }
+    .left-part, form {
+    width: 50%;
+    }
+    .fa-envelope {
+    margin-top: 0;
+    margin-left: 20%;
+    }
+    .fa-at {
+    margin-top: -10%;
+    margin-left: 65%;
+    }
+    .fa-mail-bulk {
+    margin-top: 2%;
+    margin-left: 28%;
+    }
+    button{
+        margin-top: 50px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+            </style>
+            
+    </head>
+    <body ng-app="app" ng-controller="ctrl">
+        <form name="formP" novalidate action="/myaction" method="post">
+            <!----------Local POlice Station------->
+            <div>
+                <h1>Required Verification </h1>
+                District</br>
+                <input type="text" name=dis ng-model="dis" ng-required="true"/>
+                  <span ng-show="formP.dis.$touched && formP.dis.$error.required">Please Enter District</span></br>
+                Tehsil</br>
+                <input type="text" name=tes ng-model="tes" ng-required="true"/>
+            <span ng-show="formP.tes.$touched && formP.tes.$error.required">Please Enter Tehsil</span></br>
+                City<br>
+                <input type="text" name=city ng-model="city" ng-required="true"/>
+            <span ng-show="formP.city.$touched && formP.city.$error.required">Please Enter City</span></br>
+                Local Police Station </br>
+                <input type="text" name=lps ng-model="lps" ng-required="true"/>
+            <span ng-show="formP.lps.$touched && formP.lps.$error.required">Please Enter Local Police Station</span></br>
+            </div>
+            <div>
+                Name, Address of two persons in your locality whom you know
+                <table>
+                    <tr>
+                        <td> SR NO</td>
+                        <td>Name</td>
+                        <td>Address</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name=sr1 ng-model="sr1" ng-required="true"/>
+                        <span ng-show="formP.sr1.$touched && formP.sr1.$error.required">Please Enter Serial Number</span></td>
+                        <td><input type="text" name=tnam1 ng-model="tnam1" ng-required="true"/>
+                        <span ng-show="formP.tnam1.$touched && formP.tnam1.$error.required">Please Enter Name</span></td>
+                        <td><input type="text" name=tadd1 ng-model="tadd1" ng-required="true"/>
+                        <span ng-show="formP.tadd1.$touched && formP.tadd1.$error.required">Please Enter Address</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name=sr2 ng-model="sr2" ng-required="true"/>
+                        <span ng-show="formP.sr2.$touched && formP.sr2.$error.required">Please Enter Serial Number</span></td>
+                        <td><input type="text" name=tnam2 ng-model="tnam2" ng-required="true"/>
+                        <span ng-show="formP.tnam2.$touched && formP.tnam2.$error.required">Please Enter Name</span></td>
+                        <td><input type="text" name=tadd2 ng-model="tadd2" ng-required="true"/>
+                        <span ng-show="formP.tadd2.$touched && formP.tadd2.$error.required">Please Enter Address</span></td>
+                    </tr>
+                </table>
+                <input type="submit" value='login' ng-disabled="formP.$invalid"/>
+                <a href="form5.html">
+                    <input type="button" value="Next" />
+                </a>
+            </div>

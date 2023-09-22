@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+        <script>
+            var obj=angular.module("app",[]);
+            obj.controller("ctrl",function($scope){
+            });
+            </script>
+            <style>
+                html, body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    }
+
+    form {
+    padding: 25px;
+    margin: 25px;
+    box-shadow: 0 10px 8px #2a1cf0;
+    background: #aff381;
+    }
+    .fas {
+    margin: 25px 10px 0;
+    font-size: 72px;
+    color: #fff;
+    }
+    .fa-envelope {
+    transform: rotate(-20deg);
+    }
+    .fa-at , .fa-mail-bulk{
+    transform: rotate(10deg);
+    }
+    input, textarea {
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #1c87c9;
+    outline: none;
+    }
+    input::placeholder {
+    color: #666;
+    }
+
+
+    @media (min-width: 568px) {
+    .main-block {
+    flex-direction: row;
+    }
+    .left-part, form {
+    width: 50%;
+    }
+    .fa-envelope {
+    margin-top: 0;
+    margin-left: 20%;
+    }
+    .fa-at {
+    margin-top: -10%;
+    margin-left: 65%;
+    }
+    .fa-mail-bulk {
+    margin-top: 2%;
+    margin-left: 28%;
+    }
+    button{
+        margin-top: 50px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+            </style>
+    </head>
+    <body ng-app="app" ng-controller="ctrl">
+        <form action="/myaction" method="post" name="formP" novalidate >
+            <!----------Basic Details---------->
+            <div>
+            Basic Details</br></br>
+            Visible Identification Mark<input type="text" name=vim ng-model="vim" ng-required="true"/>
+            <span ng-show="formP.vim.$touched && formP.vim.$error.required">Please Enter If You Have Any Visible Identification Mark</span></br>
+            Height(cm)<input type="number" name=heig ng-model="hei" ng-required="true"/>
+            <span ng-show="formP.heig.$touched && formP.heig.$error.required">Please Enter Your Height In Centimeters</span></br>
+            Weight(kg)<input type="number" name=weig ng-model="wei" ng-required="true"/>
+            <span ng-show="formP.weig.$touched && formP.weig.$error.required">Please Enter Your Weight In Kilograms</span></br>
+            Have You Ever Been Arrested/Prosecuted
+            Yes<input type="radio" name=ap ng-model="ap" ng-required="true"/>
+            <span ng-show="formP.ap.$touched && formP.ap.$error.required">Please Select Correct Option</span>
+            No<input type="radio" name=ap ng-model="ap" ng-required="true"/>
+            <span ng-show="formP.ap.$touched && formP.ap.$error.required">Please Select Correct Option</span></br>
+            Have You Ever Been Active In Politics
+            Yes<input type="radio" name=aip ng-model="aip" ng-required="true"/>
+            <span ng-show="formP.aip.$touched && formP.aip.$error.required">Please Select Correct Option</span>
+            No<input type="radio" name=aip ng-model="aip" ng-required="true"/>
+            <span ng-show="formP.aip.$touched && formP.aip.$error.required">Please Select Correct Option</span></br>
+            </div></br></br>
+            Certificate Addressed To</br>
+            Designation<input type="text" name=desi ng-model="des" ng-required="true"/>
+            <span ng-show="formP.desi.$touched && formP.desi.$error.required">Please Enter Designation</span></br>
+            Company<input type="text" name=comp ng-model="com" ng-required="true"/>
+            <span ng-show="formP.comp.$touched && formP.comp.$error.required">Please Enter Company Name</span></br>
+            <input type="submit" value="Submit" ng-disabled="formP.$invalid"/>
+            <a href="form4.html">
+                <input type="button" value="Next" />
+            </a>
+        </form>
+    </body>
+</html>

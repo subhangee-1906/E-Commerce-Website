@@ -1,0 +1,655 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>shopping website</title>
+<!--stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!--light-slider-css--->
+<link rel="stylesheet" type="text/css" href="D:/angular/js/lightslider.css"/>
+<!---jquery---->
+<script src="js/jquery.js"></script>
+<!---light-slider-js-->
+<script src="D:/angular/js/lightslider.js"></script>
+
+
+<!--fav-icon----->
+<link rel="shortcut icon" href="/logo2.png"/>
+<!---using Font-awesome-for icons--->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+    
+<!------navigation-->
+<center><nav>
+    <!-----social link and phone number-->
+    <div class="social call">
+    <!--social links------>
+    <div class="social"></div>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <!---phone number-->
+    <div class="phone"></div>
+    <span>Call +1234567891</span>
+    </div></center>
+    <!--menu bar----->
+    <div class="navigation">
+        <!--logo-->
+        <a href="" class="logo">
+            <img src="images/logo2.png" height="300px" width="100px"/>
+        </a>
+        
+        <!-------menu-icon------>
+        <div class="toggle"></div>
+        <!--menu-->
+        
+        <ul class="menu">
+            <li><a href="project2.html">Home</a></li>
+            <li><a href="makeup.html">Makeup</a></li>
+            <li><a href="skincare.html">Skincare</a>
+            <!--sale-lable-->
+            <span class="sale-lable">Sale</span>
+            </li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+          <img src="images/moon.png" id="icon">
+        <!---right menu-->
+        <div class="right-menu">
+            <!--search-->
+            <a href="javascript:void(0);" class="search">
+             <i class="fas fa-search"></i>   
+            </a>
+             <!--user-->
+             <a href="javascript:void(0);" class="user">
+                <i class="far fa-user"></i>   
+               </a>
+                <!--cart-icon-->
+                <a href="checkout.html">
+                    <i class="fas fa-shopping-cart">
+                    <!--number-of-products-in-cart-->
+                    <span class="num-cart-product">0</span>   
+                </i></a>
+        </div>
+    </div>
+    </nav>
+    <!--search-bar----->
+    <div class="search-bar">
+        <!--search-input------>
+        <div class="search-input">
+            <!--input----->
+            <input type="text" placeholder="Search For Products"/>
+            <!--cancel-btn---->
+            <a href="javascript:void(0);" class="search-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <!---login-and-sign-up--------------------------------->
+    <div class="form">
+        <!--login---------->
+        <div class="login-form">
+            <!--cancel-btn---------------->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+            <strong>Log In</strong>
+            <!--inputs-->
+            <form name="loginform" novalidate>
+                <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <label>Enter Captcha:</label>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <input type="text" class="form-control" readonly id="capt">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input type="text" class="form-control" id="textinput"placeholder="Click image for captcha" required />
+                    </div>
+                  </div>
+            
+                <div class="form-group">
+                            
+                           <a href="form1.html"> <input type="button" value="Login" onclick="validcap()" class="btn btn-lg btn-success btn-block"/></a>
+                        </div>
+                    </form><br/>
+               <center>  <img src="C:/angular js/images/refresh.jpg" width="40px" onclick="cap()"></center>
+                <script type="text/javascript">
+                    function cap(){
+                      var alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V'
+                                   ,'W','X','Y','Z','1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f','g','h','i',
+                                   'j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', '!','@','#','$','%','^','&','*','+'];
+                                   var a = alpha[Math.floor(Math.random()*71)];
+                                   var b = alpha[Math.floor(Math.random()*71)];
+                                   var c = alpha[Math.floor(Math.random()*71)];
+                                   var d = alpha[Math.floor(Math.random()*71)];
+                                   var e = alpha[Math.floor(Math.random()*71)];
+                                   var f = alpha[Math.floor(Math.random()*71)];
+                  
+                                   var final = a+b+c+d+e+f;
+                                   document.getElementById("capt").value=final;
+                                 }
+                                 function validcap(){
+                                  var stg1 = document.getElementById('capt').value;
+                                  var stg2 = document.getElementById('textinput').value;
+                                  if(stg1==stg2){
+                                    window.location.href="form1.html";
+                                    
+                                  }else{
+                                    alert("Please enter a valid captcha");
+                                   
+                                  }
+                                 }
+                  </script>
+               
+                
+      
+            </form>
+            <!--forget-and-sign-up-btn-->
+            <div class="form-btns">
+                
+            </div>
+        </div>
+            <!--Sign-up---------->
+            <div class="sign-up-form">
+                <!--cancel-btn---------------->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+                <strong>Sign Up</strong>
+                <!--inputs-->
+                <form name="sign-up-form">
+                    <input type="text" name="fullname" placeholder="Full Name" required/>
+                    <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                    <input type="password" name="password" placeholder="Password" required/>
+                    
+                    <input type="submit" value="Sign Up"/>
+                </form>
+                <!--forget-and-sign-up-btn-->
+                <div class="form-btns">
+                    <a href="javascript:void(0);" class="already-account">
+                        Already Have Account?</a>
+    
+                </div>
+            </div>
+    </div>
+    
+    <!---full-slider-->
+
+    <center><ul id="adaptive" class="cs-hidden">
+        <!---box-1-->
+        <li class="item-a">
+            <!---box-->
+            <div class="full-slider-box f-slide-1">
+                <!---slider-text-container---->
+                <div class="slider-text-container">
+                    
+                    <div class="f-slider-text">
+                   <span><b>Limited Offers</b></span> 
+                   <strong>45% Off<br/> With<font> Promo Code</font></strong>
+                  <center><a href="#" class="f-slider-btn">Shop Now</a></center> 
+                </div>
+            </div>
+            </div>
+        </li>
+         <!---box-2-->
+         <li class="item-a">
+            <!---box-->
+            <div class="full-slider-box f-slide-2">
+                <!---slider-text-container---->
+                <div class="slider-text-container">
+                    
+                    <div class="f-slider-text">
+                   <span><b>Limited Offers</b></span> 
+                   <strong>35% Off<br/> With<font> Promo Code</font></strong>
+                  <center><a href="#" class="f-slider-btn">Shop Now</a></center> 
+                </div>
+            </div>
+            </div>
+        </li>
+         <!---box-3-->
+         <li class="item-a">
+            <!---box-->
+            <div class="full-slider-box f-slide-3">
+                <!---slider-text-container---->
+                <div class="slider-text-container">
+                    
+                    <div class="f-slider-text">
+                   <span><b>Limited Offers</b></span> 
+                   <strong>40% Off<br/> With<font> Promo Code</font></strong>
+                  <center><a href="#" class="f-slider-btn">Shop Now</a></center> 
+                </div>
+            </div>
+            </div>
+        </li><br/><br/>
+       
+
+       
+    </center>
+    <!----featured categories------->
+      <div class="feature-heading">
+          <h2>Featured categories</h2>
+      </div><br/><br/>
+          <ul id="autoWidth" class="cs-hidden">
+              <!---1-->
+              <li class="item">
+       <!-----feature-box-->
+        <div class="feature-box">
+            <a href="makeup.html">
+               <center><img src="images/makeup1.jpg" /></center> 
+            </a>
+        </div>
+        <!----text---->
+        <span>MAKE-UP</span>
+    </li>
+
+    <!---2-->
+    <li class="item">
+        <!-----feature-box-->
+         <div class="feature-box">
+             <a href="skincare.html">
+                <center><img src="images/skincare.webp" /></center> 
+             </a>
+         </div>
+         <!----text---->
+         <span>SKIN CARE</span>
+     </li>
+
+     
+
+    
+    </ul>
+
+   <!-----new-arrival-->
+   <section class="arrival-heading">
+       <!---heading-->
+       <div class="arrival-heading">
+           <strong>New Arrival</strong>
+           <p>We Provide You New Design Fashionable Products</p>
+       </div>
+       <!--product-container------------->
+       <div class="product-container">
+           <!---product-box-1-->
+           <div class="product-box">
+               <!---img---->
+               <div class="product-img">
+                   <!---add-cart------>
+               <a href="cart.html" class="add-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="d2.html"><img src="images/dior.webp"/></a>
+                </div>
+                <!---details-->
+                <div class="product-details">
+                    <a href="d2.html" class="p-name">DIOR BACKSTAGE FACE & BODY FOUNDATION</a>
+                    <span class="p-price">Rs 3700</span>
+                </div>
+           </div>
+
+           <!---product-box-2-->
+           <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="cart.html" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+         <a href="MF5.html"><img src="images/lakme1.jpg"/></a>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="MF5.html" class="p-name">LAKME ABSOLUTE INFINITY EYESHADOW PALLETTE</a>
+                 <span class="p-price">Rs 1600</span>
+             </div>
+        </div><!---product-box-3-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="cart.html" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+         <a href="TR7.html"><img src="images/ctlipstick.webp"/></a>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="TR7.html" class="p-name">CHARLOTTE TILBURY PILLOW TALK LIP SECRETS</a>
+                 <span class="p-price">Rs 4558</span>
+             </div>
+        </div><!---product-box-4-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="cart.html" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+         <a href="a7.html"><img src="images/kbhighlighter.webp"/></a>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="a7.html" class="p-name">KAY BEAUTY IlLLUMINATING HIGHLIGHTER - ROSY DEW</a>
+                 <span class="p-price">Rs 639</span>
+             </div>
+        </div><!---product-box-5-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="cart.html" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+         <a href="bf2.html"><img src="images/nblush.webp"/></a>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="bf2.html" class="p-name">NYKAA GET CHEEKY! BLUSH DUO PALETTE - BRAZILIAN BOMBSHELL 01</a>
+                 <span class="p-price">Rs 2799</span>
+             </div>
+        </div>
+        
+             
+     </section>
+
+
+
+       <!-----new-arrival-->
+   <section class="arrival-heading">
+    <!---heading-->
+    <div class="arrival-heading">
+        <strong>Feature Item</strong>
+        <p>We Provide You New Design Fashionable Products</p>
+    </div>
+    <!--product-container------------->
+    <div class="product-container">
+        <!---product-box-1-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="cart.html" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+         <a href="ma1.html"><img src="images/lipbalm.webp"/></a>
+             </div>
+             <!---details-->
+             <div class="product-details">
+                 <a href="ma1.html" class="p-name">NY BAE SWEET TREATS LIP BALM</a>
+             </div>
+        </div>
+
+        <!---product-box-2-->
+        <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="cart.html" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="l4.html"><img src="images/pnigh.webp"/></a>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="l4.html" class="p-name">Neutrogena Bright Boost Gel Cream</a>
+          </div>
+     </div><!---product-box-3-->
+     <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="cart.html" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="m1.html"><img src="images/gvscrub.jpg"/></a>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="m1.html" class="p-name">GOOD VIBES REFRESHING FACE SCRUB</a>
+          </div>
+     </div><!---product-box-4-->
+     <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="cart.html" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="vm4.html"><img src="images/mfacewash.jpg"/></a>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="vm4.html" class="p-name">MAMAEARTH CHARCOAL FACE WASH</a>
+          </div>
+          </div>
+        </section>
+        
+         <!---------banner------------>
+
+          <!---box-->
+          <div class="banner-box f-slide-2">
+            <!---slider-text-container---->
+            <div class="banner-text-container">
+                
+                <div class="banner-text">
+               <span><b>Limited Offers</b></span> 
+               <strong>45% Off<br/> With<font> Promo Code</font></strong>
+               <a href="#" class="banner-btn">Shop Now</a>
+            </div>
+        </div>
+        </div>
+
+        <!--------services----------->
+        <section class="services">
+          <!----services-box-1---->
+          <div class="services-box">
+              <i class="fas fa-shipping-fast"></i>
+              <span>Free Shipping</span>
+              <p>Free Shipping On Prepaid Orders </p>
+          </div>
+
+           <!----services-box-2---->
+           <div class="services-box">
+            <i class="fas fa-headphones-alt"></i>
+            <span>Support 24/7</span>
+            <p>We Support 24hrs A Day </p>
+        </div>
+        
+        <!----services-box-3---->
+        <div class="services-box">
+            <i class="fas fa-sync"></i>
+            <span>100% Money Back</span>
+            <p>You Have 30Days To Return </p>
+        </div>
+
+        </section>
+
+        <!-------------footer-->
+        
+            <footer>
+            <!---copyright-->
+            <span class="copyright">
+               <b>Copyright 2021 - BRUSH & PALATTE</b> 
+            </span>
+            <!------subscribe-->
+            <div class="subscribe">
+               <center>
+                    <form>
+                    <input type="email" placeholder="Example@gmail.com" required/>
+                    <input type="submit" value="subscribe"/>
+                </form>
+            </center>
+            
+            </div>
+        </footer>
+    
+    <!--jquery------>
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <!--script----->
+    <script type="text/javascript">
+   /-------for-search-bar---/ 
+   $(document).on('click','.search',function(){
+       $('.search-bar').addClass('search-bar-active')
+   });
+   
+   $(document).on('click','.search-cancel',function(){
+       $('.search-bar').removeClass('search-bar-active')
+   });
+   
+   /---login-sign-up-form---/
+   $(document).on('click','.user,.already-account',function(){
+       $('.form').addClass('login-active').removeClass('sign-up-active')
+   });
+
+   $(document).on('click','.sign-up-btn',function(){
+       $('.form').addClass('sign-up-active').removeClass('login-active')
+   });
+
+   $(document).on('click','.form-cancel',function(){
+       $('.form').removeClass('login-active')
+   });
+   $(document).on('click','.sign-up-btn',function(){
+       $('.form').addClass('sign-up-active').removeClass('login-active')
+   });
+  
+
+   /----full-slider-script--------/
+   $(document).ready(function() {
+    $('#adaptive').lightSlider({
+        adaptiveHeight:true,
+        item:1,
+        slideMargin:0,
+        loop:true
+    });
+});
+  /---feature-slider----------/
+  $(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cs-hidden');
+        } 
+    });  
+  });
+
+  /--------------------for-fix-menu-when-scroll-------------------/
+  $(window).scroll(function(){
+      if($(document).scrollTop() > 50){
+          $('.navigation').addClass('fix-nav');
+      }
+      else{
+         $('.navigation').removeClass('fix-nav'); 
+      }
+  });
+  /------for-responsive-menu-----------/
+  $(document).ready(function(){
+      $('.toggle').click(function(){
+          $('.toggle').toggleClass('active')
+          $('.navigation').toggleClass('active')
+      })
+  })
+   </script>
+   <script>
+       var myindex=0;
+       carousel();
+
+       function carousel(){
+           var i;
+           var x=document.getElementsByClassName("full-slider-box");
+           for(i=0;i<x.length;i++){
+               x[i].style.display="none";
+           }
+           myindex++;
+           if(myindex>x.length){myindex=1}
+           x[myindex-1].style.display="block";
+           setTimeout(carousel,3000);
+       }
+   </script>
+   <script>
+    $(function() {
+$("form[name='loginform']").validate({
+ // Specify validation rules
+ rules: {
+   Name: {
+       required: true,
+       text:true
+   },
+   email: {
+     required: true,
+     email: true
+   },
+   password: {
+     required: true,
+     minlength: 5
+   }
+ },
+ // Specify validation error messages
+ messages: {
+   Name:{
+    required:"Please enter your Name",
+   
+   } ,
+   password: {
+     required: "Please provide a password",
+     minlength: "Your password must be at least 5 characters long"
+   },
+   email: "Please enter a valid email address"
+ },
+
+ submitHandler: function(form) {
+   form.submit();
+ }
+});
+});
+</script>
+<script>
+    $(function() {
+$("form[name='sign-up-form']").validate({
+ // Specify validation rules
+ rules: {
+   Name: "required",
+   email: {
+     required: true,
+     email: true
+   },
+   password: {
+     required: true,
+     minlength: 5
+   }
+ },
+ // Specify validation error messages
+ messages: {
+   name: "Please enter your Name",
+   password: {
+     required: "Please provide a password",
+     minlength: "Your password must be at least 5 characters long"
+   },
+   email: "Please enter a valid email address"
+ },
+
+ submitHandler: function(form) {
+   form.submit();
+ }
+});
+});
+</script>
+<script>
+    var icon=document.getElementById("icon");
+    icon.onclick=function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src="images/sun.png";
+        }
+        else{
+            icon.src="images/moon.png";
+        }
+    }
+</script>
+</body>
+</html>

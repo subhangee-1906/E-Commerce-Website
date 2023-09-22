@@ -1,0 +1,220 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>shopping website</title>
+<!--stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!--light-slider-css--->
+<link rel="stylesheet" type="text/css" href="angular/js/lightslider.css"/>
+<!---jquery---->
+<script src="angular/js/jquery.js"></script>
+<!---light-slider-js-->
+<script src="angular/js/lightslider.js"></script>
+
+
+<!--fav-icon----->
+<link rel="shortcut icon" href="D:/angular js/images/logo1.png"/>
+<!---using Font-awesome-for icons--->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+</head>
+<body ng-app="">
+<!------navigation-->
+<center><nav>
+    <!-----social link and phone number-->
+    <div class="social call">
+    <!--social links------>
+    <div class="social"></div>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <!---phone number-->
+    <div class="phone"></div>
+    <span>Call +1234567891</span>
+    </div></center>
+    <!--menu bar----->
+    <div class="navigation">
+        <!--logo-->
+        <a href="" class="logo">
+            <img src="images/logo2.png" height="300px" width="100px"/>
+        </a>
+        
+        <!-------menu-icon------>
+        <div class="toggle"></div>
+        <!--menu-->
+        <ul class="menu">
+            <li><a href="project.html">Home</a></li>
+            <li><a href="">Men</a></li>
+            <li><a href="women.html">Women</a>
+            <!--sale-lable-->
+            <span class="sale-lable">Sale</span>
+            </li>
+            <li><a href="kids.html">Kids</a></li>
+            <li><a href="appliances.html">Appliances</a></li>
+        </ul>
+        <!---right menu-->
+        <div class="right-menu">
+            <!--search-->
+            <a href="javascript:void(0);" class="search">
+             <i class="fas fa-search"></i>   
+            </a>
+             <!--user-->
+             <a href="javascript:void(0);" class="user">
+                <i class="far fa-user"></i>   
+               </a>
+                <!--cart-icon-->
+                <a href="">
+                    <i class="fas fa-shopping-cart">
+                    <!--number-of-products-in-cart-->
+                    <span class="num-cart-product">0</span>   
+                </i></a>
+        </div>
+    </div>
+    </nav>
+    <!--search-bar----->
+    <div class="search-bar">
+        <!--search-input------>
+        <div class="search-input">
+            <!--input----->
+            <input type="text" placeholder="Search For Products"/>
+            <!--cancel-btn---->
+            <a href="javascript:void(0);" class="search-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <!---login-and-sign-up-form------->
+    <div class="form">
+        <!----login-->
+        <div class="login-form">
+            <!---cancel-btn------->
+            <a href="javascript:void(0);" class="form-cancel">
+              <i class="fas fa-times"></i>  
+            </a>
+            <!-----heading-->
+            <strong>Log In</strong>
+            <!---Inputs-->
+            <form>
+                <input type="email" placeholder="example@gmail.com" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <!----submit-btn-->
+                <input type="submit" value="Log In">
+            </form>
+            <!----forget-and-sign-up-btn-->
+            <div class="form-btns">
+                <a href="#" class="forget">Forget Your Password?</a>
+                <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
+        </div>
+        </div>
+
+
+        <!----sign-up-->
+        <div class="sign-up-form">
+            <!---cancel-btn------->
+            <a href="javascript:void(0);" class="form-cancel">
+              <i class="fas fa-times"></i>  
+            </a>
+            <!-----heading-->
+            <strong>Sign Up</strong>
+            <!---Inputs-->
+            <form>
+                <input type="text" placeholder="Full Name" name="fullname" required>
+                <input type="email" placeholder="example@gmail.com" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <!----submit-btn-->
+                <input type="submit" value="Sign Up">
+            </form>
+            <!----forget-and-sign-up-btn-->
+            <div class="form-btns">
+                <a href="javascript:void(0);" class="already-account">Already have an account?</a>
+                
+        </div>
+        </div>
+    </div>
+    <center>
+    <!--product-container------------->
+    <div class="product-container">
+        <!---product-box-1-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="#" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+            <img src="images/TV1.jpg"/>
+             </div>
+             <!---details-->
+             <div class="product-details">
+               <center><a href="tv1.html" class="p-name"> Android Smart LED TV </a></center> 
+             </div>
+        </div>
+
+        <!---product-box-2-->
+        <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="#" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+         <img src="images/TV2.jpg"/>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="tv2.html" class="p-name">OnePlus 138.7 cm Smart Android TV</a>
+          </div>
+     </div><!---product-box-3-->
+     <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="#" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+         <img src="images/TV3.jpg"/>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="tv3.html" class="p-name">Ultra HD Smart LED TV </a>
+          </div>
+     </div>
+     <!---product-box-4-->
+     <div class="product-box">
+         <!---img---->
+         <div class="product-img">
+             <!---add-cart------>
+         <a href="#" class="add-cart">
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+         <img src="images/TV4.jpg"/>
+          </div>
+          <!---details-->
+          <div class="product-details">
+              <a href="tv4.html" class="p-name">LG 108 cm</a>
+          </div>
+     </div>
+     <!---product-box-5-->
+        <div class="product-box">
+            <!---img---->
+            <div class="product-img">
+                <!---add-cart------>
+            <a href="#" class="add-cart">
+             <i class="fas fa-shopping-cart"></i>
+         </a>
+            <img src="images/TV5.jpg"/>
+             </div>
+             <!---details-->
+             <div class="product-details">
+               <center><a href="tv5.html" class="p-name">Sony Bravia 80 cm </a></center> 
+             </div>
+        </div>
+    </div>
+    </center>
+
+</body>
+</html>

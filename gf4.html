@@ -1,0 +1,274 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>shopping website</title>
+<!--stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!--light-slider-css--->
+<link rel="stylesheet" type="text/css" href="angular/js/lightslider.css"/>
+<!---jquery---->
+<script src="angular/js/jquery.js"></script>
+<!---light-slider-js-->
+<script src="angular/js/lightslider.js"></script>
+
+
+<!--fav-icon----->
+<link rel="shortcut icon" href="images/logo2.png"/>
+<!---using Font-awesome-for icons--->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="project.css">
+</head>
+<body ng-app="">
+<!------navigation-->
+<center><nav>
+    <!-----social link and phone number-->
+    <div class="social call">
+    <!--social links------>
+    <div class="social"></div>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <!---phone number-->
+    <div class="phone"></div>
+    <span>Call +1234567891</span>
+    </div></center>
+    <!--menu bar----->
+    <div class="navigation">
+        <!--logo-->
+        <a href="" class="logo">
+            <img src="images/logo2.png" height="300px" width="100px"/>
+        </a>
+         <!--menu-->
+         <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="women.html">Women</a>
+            <!--sale-lable-->
+            <span class="sale-lable">Sale</span>
+            </li>
+            <li><a href="kids.html">Kids</a></li>
+            <li><a href="appliances.html">Appliances</a></li>
+        </ul>
+       
+        <!---right menu-->
+        <div class="right-menu">
+            <!--search-->
+            <a href="javascript:void(0);" class="search">
+             <i class="fas fa-search"></i>   
+            </a>
+             <!--user-->
+             <a href="javascript:void(0);" class="user">
+                <i class="far fa-user"></i>   
+               </a>
+                <!--cart-icon-->
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart">
+                    <!--number-of-products-in-cart-->
+                    <span class="num-cart-product">0</span>   
+                </i></a>
+        </div>
+    </div>
+    </nav>
+    <!--search-bar----->
+    <div class="search-bar">
+        <!--search-input------>
+        <div class="search-input">
+            <!--input----->
+            <input type="text" placeholder="Search For Products"/>
+            <!--cancel-btn---->
+            <a href="javascript:void(0);" class="search-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <!---login-and-sign-up-form------->
+    <div class="form">
+        <!----login-->
+        <div class="login-form">
+            <!---cancel-btn------->
+            <a href="javascript:void(0);" class="form-cancel">
+              <i class="fas fa-times"></i>  
+            </a>
+            <!-----heading-->
+            <strong>Log In</strong>
+            <!---Inputs-->
+            <form>
+                <input type="email" placeholder="example@gmail.com" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <!----submit-btn-->
+                <input type="submit" value="Log In">
+            </form>
+            <!----forget-and-sign-up-btn-->
+            <div class="form-btns">
+                <a href="#" class="forget">Forget Your Password?</a>
+                <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
+        </div>
+        </div>
+
+
+        <!----sign-up-->
+        <div class="sign-up-form">
+            <!---cancel-btn------->
+            <a href="javascript:void(0);" class="form-cancel">
+              <i class="fas fa-times"></i>  
+            </a>
+            <!-----heading-->
+            <strong>Sign Up</strong>
+            <!---Inputs-->
+            <form>
+                <input type="text" placeholder="Full Name" name="fullname" required>
+                <input type="email" placeholder="example@gmail.com" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <!----submit-btn-->
+                <input type="submit" value="Sign Up">
+            </form>
+            <!----forget-and-sign-up-btn-->
+            <div class="form-btns">
+                <a href="javascript:void(0);" class="already-account">Already have an account?</a>
+                
+        </div>
+        </div>
+    </div>
+    
+    <table border="1" width="100%" >
+        <tr colspan="2">
+           
+            <td width="30%" ><img src="images/GF4 (2).webp" width="100%"  /><br/>
+                <u><b>Product Details</b></u>
+           <ol>
+           <li>Sandals in imitation leather. Ankle strap with a hook <br/>
+               and loop fastening, imitation leather insoles and fluted soles.</li>
+           <li>Height of soles: 1.5 inches (3.5 cm)</li>
+           <li>100% Polyurethane<br/>
+            Wipe with a clean and dry cloth when needed</li>
+           <li>Synthetic<br/>
+            Wipe with a clean, dry cloth to remove dust</li>
+           <li>Backstrap</li>
+           
+           </ol>
+            </td>
+            <td><b><center><font size="5">Girls Black Flatform Heels</font></b>
+            <br/>
+            SKU: ITMTR00651NAVY<br/><br/>
+              M.R.P. <font size="3" face="times new roman"><b>Price  Rs. 1499</b></font>
+              <br/>
+               <span class="fa fa-star checked" style="color: orange;"></span>
+               <span class="fa fa-star checked" style="color: orange;"></span>
+               <span class="fa fa-star checked" style="color: orange;"></span>
+               <span class="fa fa-star checked" style="color: orange;"></span>
+              <br/>
+              (Incl. of all taxes)  <br/><br/>
+              <a href="cart.html">ADD TO CART</a>
+           <b>  Select Size:</b> 
+             <select>
+                
+                <option>7Y</option>
+                <option>8Y</option>
+                <option>9Y</option>
+                <option>10Y</option>
+                <option>11Y</option>
+                <option>12Y</option>
+                <option>13Y</option>
+                <option>14Y</option>
+               
+           </select>
+        </center>
+           <br/>
+           <hr/>
+           <div class="grid-container">
+            <span class="grid-item"><img src="images/gh10.jpg"  width="23%"/></span>
+            <span class="grid-item"><img src="images/gh11.jpg"  width="23%"/></span>
+            <span class="grid-item"><img src="images/gh12.jpg"  width="23%"/></span>
+            </div>
+           
+           <hr/>
+           <u><b>Shipping And Dispatch Time</b></u>
+           <ol>
+               <li> 5 Working Days From The Date Of Placing Your Order. <br/>
+                   Free shipping for all orders above Rs.1000</li>
+               <li>This product is non-returnable. Exchange or Refund<br/>
+                 will not be made against a non-returnable item unless there is a quality issue, defect or is<br/>
+                  different from its description.</li>
+           </ol>
+           
+        </td>
+           
+        </tr>
+    </table>
+             
+                        
+                       
+        
+
+      
+<!--jquery------>
+<script src="D:/angular js/js/jquery.js"></script>
+<!--script----->
+<script type="text/javascript">
+/-------for-search-bar---/ 
+$(document).on('click','.search',function(){
+   $('.search-bar').addClass('search-bar-active')
+});
+
+$(document).on('click','.search-cancel',function(){
+   $('.search-bar').removeClass('search-bar-active')
+});
+
+/*---For Login and Sign-up----------------------------*/
+$(document).on('click','.user,.already-account',function(){
+    $('.form').addClass('login-active').removeClass('sign-up-active')
+});
+
+$(document).on('click','.sign-up-btn',function(){
+    $('.form').addClass('sign-up-active').removeClass('login-active')
+});
+
+$(document).on('click','.form-cancel',function(){
+    $('.form').removeClass('login-active').removeClass('sign-up-active')
+});
+
+
+
+/----full-slider-script--------/
+$(document).ready(function() {
+$('#adaptive').lightSlider({
+    adaptiveHeight:true,
+    item:1,
+    slideMargin:0,
+    loop:true
+});
+});
+/---feature-slider----------/
+$(document).ready(function() {
+$('#autoWidth').lightSlider({
+    autoWidth:true,
+    loop:true,
+    onSliderLoad: function() {
+        $('#autoWidth').removeClass('cs-hidden');
+    } 
+});  
+});
+
+/--------------------for-fix-menu-when-scroll-------------------/
+$(window).scroll(function(){
+  if($(document).scrollTop() > 50){
+      $('.navigation').addClass('fix-nav');
+  }
+  else{
+     $('.navigation').removeClass('fix-nav'); 
+  }
+});
+/------for-responsive-menu-----------/
+$(document).ready(function(){
+  $('.toggle').click(function(){
+      $('.toggle').toggleClass('active')
+      $('.navigation').toggleClass('active')
+  })
+})
+</script>
+</body>
+</html>
